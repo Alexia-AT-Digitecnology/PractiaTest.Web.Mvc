@@ -1,0 +1,60 @@
+@using PractiaTest.Models.Entities
+@model PractiaTest.Models.Entities.CompleteClient
+
+<h1>Client Page</h1>
+
+<div>
+    <p class="font-weight-bold">Client name: @Model.Name</p>
+    <p class="font-weight-bold">Client address: @Model.Address</p>
+    <p class="font-weight-bold">Client born date: @Model.BornDate</p>
+    <p class="font-weight-bold">Client phone number: @Model.PhoneNumber</p>
+    <p class="font-weight-bold">Client email: @Model.Email</p>
+
+    @if (@Model.Has10PercentDiscount > 0)
+    {
+        <div class="alert alert-dismissible alert-success">
+            <h4 class="alert-heading">¡¡You have a 10% Discount!!</h4>
+            <p class="mb-0"> You will have a discount of @Model.Has10PercentDiscount.ToString("C") in future purchases.</p>
+        </div>
+    }
+
+    @if (@Model.Has10PercentDiscount == 0)
+    {
+        <div class="alert alert-dismissible alert-danger">
+            <h4 class="alert-heading">¡¡You DON'T have any discount!!</h4>
+            <p class="mb-0"> Sorry, but you have dont any discount, you are losing money.</p>
+        </div>
+    }
+
+    <h2>Invoices</h2>
+
+    <table class='table table-striped'>
+        <thead>
+        <tr>
+            <th>Issue date</th>
+            <th>Paid</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (Invoice invoice in Model.Invoices)
+        {
+            <tr>
+                <td><a asp-controller="Home" asp-action="InvoiceViewer" asp-route-id="@invoice.Id">@invoice.IssueDate</a></td>
+                <td>
+                    @invoice.Paid
+                </td>
+                <td>@invoice.Total</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<div class='card-footer'>
+    <button class='btn btn-outline-secondary'
+            style='width:80px'
+            onclick="history.go(-1);">
+        <i class='fa fa-chevron-left'></i> Back
+    </button>
+</div>

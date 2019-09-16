@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PractiaTest.Web.Mvc", "PractiaTest.Web.Mvc\PractiaTest.Web.Mvc.csproj", "{E8AC7127-6D86-46A3-A459-4B094B3F9F72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PractiaTest.Models", "PractiaTest.Models\PractiaTest.Models.csproj", "{3549D373-6136-47D4-979A-A7310F1BA27C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8AC7127-6D86-46A3-A459-4B094B3F9F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8AC7127-6D86-46A3-A459-4B094B3F9F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8AC7127-6D86-46A3-A459-4B094B3F9F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8AC7127-6D86-46A3-A459-4B094B3F9F72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3549D373-6136-47D4-979A-A7310F1BA27C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3549D373-6136-47D4-979A-A7310F1BA27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3549D373-6136-47D4-979A-A7310F1BA27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3549D373-6136-47D4-979A-A7310F1BA27C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
